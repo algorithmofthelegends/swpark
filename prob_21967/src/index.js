@@ -1,12 +1,13 @@
 /**
- * @overview https://www.acmicpc.net/problem/21967
+ * @overview {{ TODO. Add description, and remove braket }}
  * @createdBy swpark (<swpark@lucentblock.com>)
- * @createdAt 2022-01-22 21:34:01
+ * @createdAt 2022-01-25 02:34:50
  * @updatedBy swpark (<swpark@lucentblock.com>)
- * @updatedAt 2022-01-27 01:57:31
+ * @updatedAt 2022-01-27 01:57:24
  */
 
-export function solve(n: number, values: number[]) {
+function solve(n, values) {
+  values = values.map((v) => parseInt(v));
   const counter = new Array(10).fill(0);
 
   // 왼쪽인덱스
@@ -49,3 +50,11 @@ export function solve(n: number, values: number[]) {
 
   return length;
 }
+
+const fs = require("fs");
+const [n, ...values] = fs
+  .readFileSync("input.txt") // Change to /dev/stdin
+  .toString()
+  .trim()
+  .split(/\s+/);
+console.log(solve(n, values));
