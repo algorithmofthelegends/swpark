@@ -3,11 +3,10 @@
  * @createdBy swpark (<swpark@lucentblock.com>)
  * @createdAt 2022-01-22 21:43:14
  * @updatedBy swpark (<swpark@lucentblock.com>)
- * @updatedAt 2022-01-25 02:14:03
+ * @updatedAt 2022-02-10 01:57:38
  */
 
-
- module.exports = {
+module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
   extends: [
@@ -22,10 +21,10 @@
   rules: {
     "prettier/prettier": [
       "error",
-      { 
-        endOfLine: "auto" 
+      {
+        endOfLine: "auto"
       }
-    ], 
+    ],
     "no-trailing-spaces": "error",
     "padded-blocks": ["error", "never"],
     "key-spacing": ["error", { afterColon: true }],
@@ -46,5 +45,5 @@
       "error",
       { before: false, after: true }
     ]
-  } 
+  }
 };
